@@ -1,0 +1,95 @@
+[user]
+	email = "turtlebender@gmail.com"
+	signingkey = "131DC763B0066D4B"
+	name = Tom Howe
+[branch "master"]
+	remote = origin
+	merge = master
+[alias]
+	st = status
+	d = diff
+	ci = commit
+	cia = commit -v -a
+	co = checkout
+	cp = cherry-pick
+  l = log --pretty=oneline
+	ll = log -p
+	lt = log trunk..
+	llt = log -p trunk..
+	lm = log master..
+	llm = log -p master..
+	lg = log -p
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	b = branch
+	br = branch
+	staged = diff --cached
+	unstaged = diff
+	logpretty = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+	di = diff
+	sta = stash
+	llog = log
+	ci-status = "!bash ~/src/globusonline/ci-dev-tools/git_tools/ci_status.sh"
+	ci-release-notes = "!python ~/src/globusonline/ci-dev-tools/git_tools/ci_release_notes.py"
+	ci-issue-branch = "!python ~/src/globusonline/ci-dev-tools/git_tools/ci_issue_branch.py"
+	ci-issue-merge = "!python ~/src/globusonline/ci-dev-tools/git_tools/ci_issue_merge.py"
+	ci-issue-sign = "!python ~/src/globusonline/ci-dev-tools/git_tools/ci_issue_sign.py"
+	ci-release-branch = "!python ~/src/globusonline/ci-dev-tools/git_tools/ci_release_branch.py"
+	ci-release-sign = "!python ~/src/globusonline/ci-dev-tools/git_tools/ci_release_sign.py"
+	ci-master = "!python ~/src/globusonline/ci-dev-tools/git_tools/ci_master.py"
+	switch = !legit switch \"$@\"
+	branches = !legit branches
+	sprout = !legit sprout \"$@\"
+	unpublish = !legit unpublish \"$@\"
+	harvest = !legit harvest \"$@\"
+	sync = !legit sync \"$@\"
+	publish = !legit publish \"$@\"
+	graft = !legit graft \"$@\"
+[core]
+	excludesfile = /Users/trhowe/.gitignore
+	autocrlf = input
+	editor = /usr/bin/vim
+[color]
+	ui = true
+	interactive = auto
+	branch = auto
+	diff = auto
+	status = auto
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+[branch]
+	autosetupmerge = true
+[apply]
+	whitespace = nowarn
+[merge]
+	tool = opendiff
+	keepBackup = false
+[mergetool "diffmerge"]
+	cmd = diffmerge --merge --result=$MERGED $LOCAL $BASE $REMOTE
+	trustExitCode = false
+[jira]
+	server = "http://jira.globus.org"
+	username = "trhowe"
+	password = 
+	cli = /Users/trhowe/jira-cli-2.3.0/jira.sh
+	user = trhowe
+[chef-repo]
+	personal-version = 0.0.3
+[github]
+	token = 6acc1eeb705206da67b8fe44c994852c
+	user = turtlebender
+[advice]
+	statusHints = false
+[push]
+	default = tracking
