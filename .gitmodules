@@ -31,9 +31,6 @@
 [submodule "vim/bundle/makegreen"]
 	path = vim/bundle/makegreen
 	url = https://github.com/reinh/vim-makegreen
-[submodule "vim/bundle/tasklist"]
-	path = vim/bundle/tasklist
-	url = https://github.com/vim-scripts/TaskList.vim.git
 [submodule "_vim/vim/bundle/ropevim"]
 	path = _vim/vim/bundle/ropevim
 	url = https://github.com/sontek/rope-vim.git
@@ -64,3 +61,6 @@
 [submodule "vim/bundle/detectindent"]
 	path = vim/bundle/detectindent
 	url = https://github.com/ciaranm/detectindent.git
+[submodule "vim/bundle/ropevim"]
+	path = vim/bundle/ropevim
+	url = https://github.com/sontek/rope-vim.git
