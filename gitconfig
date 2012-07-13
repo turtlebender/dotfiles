@@ -1,7 +1,7 @@
 [user]
-	email = "turtlebender@gmail.com"
 	signingkey = "131DC763B0066D4B"
 	name = Tom Howe
+	email = turtlebender@gmail.com
 [branch "master"]
 	remote = origin
 	merge = master
@@ -29,14 +29,15 @@
 	di = diff
 	sta = stash
 	llog = log
+	hist = log --all --graph --pretty='[%C(cyan)%h%Creset]%C(bold cyan)%d%Creset %s'
 	ci-status = "!bash ~/src/globusonline/ci-dev-tools/git_tools/ci_status.sh"
-	ci-release-notes = "!python ~/src/globusonline/ci-dev-tools/git_tools/ci_release_notes.py"
-	ci-issue-branch = "!python ~/src/globusonline/ci-dev-tools/git_tools/ci_issue_branch.py"
-	ci-issue-merge = "!python ~/src/globusonline/ci-dev-tools/git_tools/ci_issue_merge.py"
-	ci-issue-sign = "!python ~/src/globusonline/ci-dev-tools/git_tools/ci_issue_sign.py"
-	ci-release-branch = "!python ~/src/globusonline/ci-dev-tools/git_tools/ci_release_branch.py"
-	ci-release-sign = "!python ~/src/globusonline/ci-dev-tools/git_tools/ci_release_sign.py"
-	ci-master = "!python ~/src/globusonline/ci-dev-tools/git_tools/ci_master.py"
+	ci-release-notes = "!~/ci-dev-tools/bin/python ~/src/globusonline/ci-dev-tools/git_tools/ci_release_notes.py"
+	ci-issue-branch = "!~/ci-dev-tools/bin/python ~/src/globusonline/ci-dev-tools/git_tools/ci_issue_branch.py"
+	ci-issue-merge = "!~/ci-dev-tools/bin/python ~/src/globusonline/ci-dev-tools/git_tools/ci_issue_merge.py"
+	ci-issue-sign = "!~/ci-dev-tools/bin/python ~/src/globusonline/ci-dev-tools/git_tools/ci_issue_sign.py"
+	ci-release-branch = "!~/ci-dev-tools/bin/python ~/src/globusonline/ci-dev-tools/git_tools/ci_release_branch.py"
+	ci-release-sign = "!~/ci-dev-tools/bin/python ~/src/globusonline/ci-dev-tools/git_tools/ci_release_sign.py"
+	ci-master = "!~/ci-dev-tools/bin/python ~/src/globusonline/ci-dev-tools/git_tools/ci_master.py"
 	switch = !legit switch \"$@\"
 	branches = !legit branches
 	sprout = !legit sprout \"$@\"
@@ -45,6 +46,7 @@
 	sync = !legit sync \"$@\"
 	publish = !legit publish \"$@\"
 	graft = !legit graft \"$@\"
+  review = "!bash ~/bin/review.sh"
 [core]
 	excludesfile = /Users/trhowe/.gitignore
 	autocrlf = input
