@@ -134,8 +134,10 @@ export PYTHONPATH=~/src/globusonline/ci-dev-tools/git_tools
 export PROJECT_HOME=$HOME/src
 export LESS=-RFX
 alias less="less -RFX"
-if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash  ]; then
-  . `brew --prefix`/etc/bash_completion.d/git-completion.bash 
+if $(which brew) ; then
+  if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash  ]; then
+    . `brew --prefix`/etc/bash_completion.d/git-completion.bash 
+  fi
 fi
 export PATH=/usr/local/sbin:~/atlassian-cli-2.4.0/:~/bin:$PATH
 
