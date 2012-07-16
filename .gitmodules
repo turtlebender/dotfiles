@@ -64,3 +64,6 @@
 [submodule "vim/bundle/ropevim"]
 	path = vim/bundle/ropevim
 	url = https://github.com/sontek/rope-vim.git
+[submodule "vim/bundle/bufexplorer"]
+	path = vim/bundle/bufexplorer
+	url = https://github.com/vim-scripts/bufexplorer.zip.git

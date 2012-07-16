@@ -2,6 +2,7 @@ filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+let mapleader=","
 set foldmethod=indent
 set foldlevel=99
 
@@ -23,8 +24,8 @@ let g:SuperTabDefaultCompletionType = "context"
 
 set completeopt=menuone,longest,preview
 
-map T :NERDTreeToggle<CR>
-
+map f :NERDTreeToggle<CR>
+map P <F7><CR>
 map <leader>j :RopeGotoDefinition<CR>
 map <leader>r :RopeRename<CR>
 
@@ -57,8 +58,8 @@ EOF
 set background=dark
 colorscheme solarized
 "configure nerdtree
-"let NERDTreeIgnore=['\env','\.vim$', '\~$', '\.pyc$', '\.pyo', '\.rbo', '\.o', '\~$', '\.swp$', '\.egg-info$', '^dist$', '^build$']
-"let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\~$']
+let NERDTreeIgnore=['\env','\.vim$', '\~$', '\.pyc$', '\.pyo', '\.rbo', '\.o', '\~$', '\.swp$', '\.egg-info$', '^dist$', '^build$']
+let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\~$']
 if has("autocmd")
   autocmd FileType python set completefunc=pythoncomplete#Complete
 endif
