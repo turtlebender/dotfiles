@@ -1,9 +1,11 @@
 # Chef assumes that it owns this file.
 # Additions to bash should be placed into $HOME/.bash_profile_includes/ with a .sh extension
 
-for file in $(\ls -1 ${HOME}/.bash_profile_includes/*.sh); do
-  source $file;
-done
+if [ -e ${HOME}/.bash_profile_includes ] ; then
+  for file in $(\ls -1 ${HOME}/.bash_profile_includes/*.sh); do
+    source $file;
+  done
+fi
 
 function parse_git_branch {
   ref=$(git-symbolic-ref HEAD 2> /dev/null) || return
@@ -15,14 +17,18 @@ YELLOW="\[\033[0;33m\]"
 GREEN="\[\033[0;32m\]"
 
 PS1="$RED\$(date +%H:%M) \w$YELLOW \$(parse_git_branch)$GREEN\$ "
-for i in ~/bash_completion/* ; do source $i ; done
+if [ -e ~/bash_completion ] ; then
+  for i in ~/bash_completion/* ; do source $i ; done
+fi
 export GLOBUS_LOCATION=$HOME/gt_location
 export GLOBUS_FLAVOR=gcc64dbg
 
 PATH="./bin":$PATH
 export EDITOR=vi
 
-source /usr/local/bin/virtualenvwrapper.sh
+if [ -e /usr/local/bin/virtualenvwrapper.sh ] ; then
+  source /usr/local/bin/virtualenvwrapper.sh
+fi
 
 has_virtualenv() {
   if [ -e .venvrc ]; then
@@ -128,8 +134,10 @@ export PYTHONPATH=~/src/globusonline/ci-dev-tools/git_tools
 export PROJECT_HOME=$HOME/src
 export LESS=-RFX
 alias less="less -RFX"
-if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash  ]; then
-  . `brew --prefix`/etc/bash_completion.d/git-completion.bash 
+if $(which brew) ; then
+  if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash  ]; then
+    . `brew --prefix`/etc/bash_completion.d/git-completion.bash 
+  fi
 fi
 export PATH=/usr/local/sbin:~/atlassian-cli-2.4.0/:~/bin:$PATH
 
