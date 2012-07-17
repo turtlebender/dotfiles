@@ -5,7 +5,7 @@ echo "Fetching..."
 git fetch
 
 if [[ $# -eq 0 ]]; then
-    master=$(git ci-master)
+    master=$(git master)
 else
     master="$1"
 fi

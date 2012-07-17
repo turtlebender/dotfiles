@@ -30,14 +30,14 @@
 	sta = stash
 	llog = log
 	hist = log --all --graph --pretty='[%C(cyan)%h%Creset]%C(bold cyan)%d%Creset %s'
-	ci-status = "!bash ~/src/globusonline/ci-dev-tools/git_tools/ci_status.sh"
-	ci-release-notes = "!~/ci-dev-tools/bin/python ~/src/globusonline/ci-dev-tools/git_tools/ci_release_notes.py"
-	ci-issue-branch = "!~/ci-dev-tools/bin/python ~/src/globusonline/ci-dev-tools/git_tools/ci_issue_branch.py"
-	ci-issue-merge = "!~/ci-dev-tools/bin/python ~/src/globusonline/ci-dev-tools/git_tools/ci_issue_merge.py"
-	ci-issue-sign = "!~/ci-dev-tools/bin/python ~/src/globusonline/ci-dev-tools/git_tools/ci_issue_sign.py"
-	ci-release-branch = "!~/ci-dev-tools/bin/python ~/src/globusonline/ci-dev-tools/git_tools/ci_release_branch.py"
-	ci-release-sign = "!~/ci-dev-tools/bin/python ~/src/globusonline/ci-dev-tools/git_tools/ci_release_sign.py"
-	ci-master = "!~/ci-dev-tools/bin/python ~/src/globusonline/ci-dev-tools/git_tools/ci_master.py"
+  merge-status = "!bash ~/.git_tools/ci_status.sh"
+	release-notes = "!~/.git_tools/vendor/python/bin/python ~/.git_tools/ci_release_notes.py"
+	issue-branch = "!~/.git_tools/vendor/python/bin/python ~/.git_tools/ci_issue_branch.py"
+	issue-merge = "!~/.git_tools/vendor/python/bin/python ~/.git_tools/ci_issue_merge.py"
+	issue-sign = "!~/.git_tools/vendor/python/bin/python ~/.git_tools/ci_issue_sign.py"
+	release-branch = "!~/.git_tools/vendor/python/bin/python ~/.git_tools/ci_release_branch.py"
+	release-sign = "!~/.git_tools/vendor/python/bin/python ~/.git_tools/ci_release_sign.py"
+	master = "!~/.git_tools/vendor/python/bin/python ~/.git_tools/ci_master.py"
 	switch = !legit switch \"$@\"
 	branches = !legit branches
 	sprout = !legit sprout \"$@\"
