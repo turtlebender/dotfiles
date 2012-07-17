@@ -1,0 +1,3 @@
+Approved for merge.
+
+MERGE: {{issue_branch}} > {{merge_branch}}
