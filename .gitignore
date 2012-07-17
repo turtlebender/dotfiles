@@ -1,3 +1,4 @@
 git_tools/vendor/python
 distribute*
 virtualenv.py*
+vim/.netrwhist
