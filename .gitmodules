@@ -67,3 +67,9 @@
 [submodule "vim/bundle/bufexplorer"]
 	path = vim/bundle/bufexplorer
 	url = https://github.com/vim-scripts/bufexplorer.zip.git
+[submodule "flake8"]
+	path = flake8
+	url = https://github.com/singingwolfboy/flake8.git
+[submodule "tools/flake8"]
+	path = tools/flake8
+	url = https://github.com/singingwolfboy/flake8.git
