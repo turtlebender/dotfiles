@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
+pushd ~/tools/foodcritic
 bundle exec foodcritic
+popd
