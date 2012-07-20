@@ -2,3 +2,6 @@ git_tools/vendor/python
 distribute*
 virtualenv.py*
 vim/.netrwhist
+tools/foodcritic/vendor/ruby
+tools/foodcritic/bin
+vendor/ruby
