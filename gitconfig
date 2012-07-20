@@ -29,7 +29,8 @@
 	di = diff
 	sta = stash
 	llog = log
-	hist = log --all --graph --pretty='[%C(cyan)%h%Creset]%C(bold cyan)%d%Creset %s'
+  review = diff master -U20 -b
+  hist = log --format='%Cgreen%h%Creset %ad %C(cyan)%an%Creset - %s%C(red)%d%Creset' --graph --date=short 
   merge-status = "!bash ~/.git_tools/ci_status.sh"
 	release-notes = "!~/.git_tools/vendor/python/bin/python ~/.git_tools/ci_release_notes.py"
 	issue-branch = "!~/.git_tools/vendor/python/bin/python ~/.git_tools/ci_issue_branch.py"

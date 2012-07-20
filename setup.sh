@@ -19,6 +19,6 @@ test -d ~/bin || mkdir ~/bin
 test -L ~/bin/flake8 || ln -s $(pwd)/tools/flake8/bin/flake8 ~/bin/flake8
 
 pushd tools/foodcritic
-bundle install --local --path vendor
+bundle install --local --path vendor --binstubs
 popd
-test -L ~/bin/foodcritic || ln -s ~/tools/foodcritic/foodcritic ~/bin/foodcritic
+test -L ~/bin/foodcritic || ln -s ~/tools/foodcritic/bin/foodcritic ~/bin/foodcritic

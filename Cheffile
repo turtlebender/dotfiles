@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+site 'http://community.opscode.com/api/v1'
+
+# cookbook 'chef-client'
+
+# cookbook 'apache2', '>= 1.0.0'
+
+cookbook 'rbenv',
+    :git => 'https://github.com/fnichol/chef-rbenv', :ref => 'v0.6.10'
+
+cookbook 'workstation',
+  :path => File.expand_path('~/src/workstation')
+
+#  :git => "https://github.com/turtlebender/workstation-cookbook.git"
+# cookbook 'postgresql',
+#   :git => 'https://github.com/findsyou/cookbooks',
+#   :ref => 'postgresql-improvements'

@@ -1,0 +1,23 @@
+SITE
+  remote: http://community.opscode.com/api/v1
+  specs:
+    homebrew (1.2.0)
+
+GIT
+  remote: https://github.com/fnichol/chef-rbenv
+  ref: v0.6.10
+  sha: dee3edd9f1118aff336539a8e3497704da2aebff
+  specs:
+    rbenv (0.6.10)
+
+PATH
+  remote: /Users/trhowe/src/workstation
+  specs:
+    workstation (0.0.1)
+      rbenv (>= 0.0.0)
+
+DEPENDENCIES
+  homebrew (>= 0)
+  rbenv (>= 0)
+  workstation (>= 0)
+
